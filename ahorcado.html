@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Juega El Ahorcado En Javascri</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="codigo.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<meta name="keyword" content="Juega el ahorcado, ahorcado en javascript, ahorcado en canvas, canvas, javascript, html5, juego, ahorcado">
+	<!-- <link rel="stylesheet" type="text/css" href="bootstrap.css"> -->
+</head>
+<body>
+	<div class='cuerpo'>
+	<h1>Adivina el Ahorcado</h1>
+	<p>Sigueme: <a href="https://www.twitter.com/morenodaryl" target="_blank" id="twitter">@morenodaryl</a></p>
+	<div id="contenedor">
+		<ul id="puestas">
+			
+		</ul>
+		<a href="https://twitter.com/share" class="twitter-share-button" data-via="MorenoDaryl" data-lang="es" data-hashtags="ElAhorcadoJs" data-dnt="true">Twittear</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		
+		<canvas id='ahorcado' width = '400' height = '400' >
+		
+		</canvas>	
+	</div>
+	<form id="formulario">
+		<label for="letra"  class="text-info" id="texto">Elige una letra</label>
+		<input type='text' id='letra' autocomplete="off" class='form-control' maxlength='1'/>
+		<input type='submit' id='btn' class='btn btn-primary'value='Boom'/>
+
+	</form>
+	
+	<div>
+		
+	</div>
+	</div>
+</body>
+</html>
