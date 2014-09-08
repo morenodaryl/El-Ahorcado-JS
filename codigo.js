@@ -15,7 +15,14 @@ window.onload = function(){
 		"Nicaragua", "abanico", "consola", "ropa", "sapo", "aves", "pelota",
 		"caramelo", "estuche", "zapato", "caballo", "camilla", "enfermero",
 		"tonto", "juego", "comida", "manzana", "animal", "clave",
-		"sirena", "corazon", "pasado", "muerte", 
+		"sirena", "corazon", "pasado", "muerte",
+		"coche", "mano", "pie", "pastel", "pasta", "puerta", "edificio",
+		"facebook", "twitter", "calle", "callejon", "sopa", "suerte",
+		"villano", "sal", "mar", "oso", "pollo", "cerdo", "piña", 
+		"colombia", "carta", "sentimiento", "destino", "verdad",
+		"mirar", "espejo", "sombra", "siempre", "eternidad", 
+		"olvidar", "luz", "primero", "conocer", "oscuridad",
+		"color", "salvacion", "hoy", "entrentar"
 		];
 		var rnd, largo;
 		var palabra, palabraOriginal;
@@ -182,7 +189,8 @@ window.onload = function(){
 	palabra.generar();
 	console.log("Quedan: " + palabra.quedan);
 	dibujarPoste();
-
+	var g=0;
+	var p=0;
 
 	ahorcado.prototype.dibujar = function(){
 		can = document.getElementById('ahorcado');
@@ -204,13 +212,18 @@ window.onload = function(){
 				contento.src = "img/contento.png";
 				contento.onload = function(){
 					dibujarContento();
+					
 				}
 			} 
 		}
 		else{
 			trazo.fillStyle = '#F5EBA0';
 			trazo.strokeStyle = '#F5EBA0';
-
+			if (palabra.quedan==0) {
+				reset();
+				g++;
+				ganadas.innerHTML = g;
+			};
 			if (this.intentos >= 0){
 				cabeza = new Image();
 				cabeza.src = "img/cabeza.png";
@@ -267,6 +280,9 @@ window.onload = function(){
 			};
 			if(this.intentos >= 6) {
 				// Cuando ya perdio y se va a reiniciar 
+				// alert(palabra.perdidas);
+				p++;
+				perdidas.innerHTML = p;
 				reset();
 			}
 			this.intentos++;
@@ -283,6 +299,8 @@ window.onload = function(){
 	var texto = document.getElementById('texto');
 	var form = document.getElementById("formulario");
 	var puestas = document.getElementById("puestas");
+	var ganadas = document.getElementById("ganadas");
+	var perdidas = document.getElementById("perdidas");
 
 
 	form.addEventListener('submit',function(e){
