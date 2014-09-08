@@ -169,21 +169,13 @@ window.onload = function(){
 	trazo.fillRect(0,0,400,400);
 	
 	function dibujarPoste(){
-		var img = new Image (); 
 		var fondo = new Image (); 
 		fondo.src = "img/fondo.png";
 		fondo.onload = function (){
-			trazo.drawImage(fondo, -25, -40);
-			palabra.dibujarCampo();
-		}
-		img.src = "img/arbol.png";
-		img.onload = function (){
-			trazo.drawImage(img, -60, -30);
+			trazo.drawImage(fondo, 0, 0);
 			palabra.dibujarCampo();
 		}
 	};
-
-
 
 	
 	palabra = new juego();
@@ -207,7 +199,6 @@ window.onload = function(){
 				texto.innerHTML = "Ganaste :D";
 				btn.value = "Reiniciar?";
 				letra.disabled = true;
-				this.intentos = 10;
 				this.intentos = 10;
 				contento = new Image();
 				contento.src = "img/contento.png";
@@ -276,15 +267,7 @@ window.onload = function(){
 			};
 			if(this.intentos >= 6) {
 				// Cuando ya perdio y se va a reiniciar 
-				trazo.clearRect(0,0,400,400);
-				btn.value = 'Boom';
-				this.intentos = -1;
-				dibujarPoste();
-				palabra.generar();
-				palabra.dibujarCampo();
-				texto.innerHTML = "Elige una letra";
-				letra.disabled = false;
-				puestas.innerHTML = "";
+				reset();
 			}
 			this.intentos++;
 
@@ -344,6 +327,19 @@ window.onload = function(){
 			trazo.drawImage(cabezamuerta,95,90);
 			palabra.generarPalabra();
 		};
+		if (true) {};
+	}
+
+	function reset(){
+		trazo.clearRect(0,0,400,400);
+		btn.value = 'Boom';
+		hombre.intentos = -1;
+		dibujarPoste();
+		palabra.generar();
+		palabra.dibujarCampo();
+		texto.innerHTML = "Elige una letra";
+		letra.disabled = false;
+		puestas.innerHTML = "";
 	}
 
 	function dibujarContento(){
