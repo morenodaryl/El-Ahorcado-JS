@@ -306,8 +306,10 @@ window.onload = function(){
 	form.addEventListener('submit',function(e){
 		e.preventDefault();
 		hombre.dibujar();
+		letra.focus();
 		if (letra.value != "") {
 			return false;
+
 		}
 	});
 
@@ -358,6 +360,7 @@ window.onload = function(){
 		texto.innerHTML = "Elige una letra";
 		letra.disabled = false;
 		puestas.innerHTML = "";
+		letra.focus();
 	}
 
 	function dibujarContento(){
