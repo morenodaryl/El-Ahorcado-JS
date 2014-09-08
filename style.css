@@ -132,7 +132,6 @@ form{
 
 #ganadas{
 	position:absolute;
-	left: 0;
 	left: -1.5em;
 	padding-right: 1em;
 	padding-left: 0.2em;
@@ -146,7 +145,6 @@ form{
 
 #perdidas{
 	position:absolute;
-	left: 0;
 	left: -1.5em;
 	padding-right: 1em;
 	padding-left: 0.2em;
