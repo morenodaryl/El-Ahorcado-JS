@@ -207,9 +207,7 @@ window.onload = function(){
 				texto.innerHTML = "Ganaste :D";
 				btn.value = "Reiniciar?";
 				letra.disabled = true;
-				if (this.intentos == 0){
-					this.intentos = 1;
-				}
+				this.intentos = 10;
 				this.intentos = 10;
 				contento = new Image();
 				contento.src = "img/contento.png";
