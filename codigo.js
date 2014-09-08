@@ -277,7 +277,7 @@ window.onload = function(){
 				// Cuando ya perdio y se va a reiniciar 
 				trazo.clearRect(0,0,400,400);
 				btn.value = 'Boom';
-				this.intentos = 0;
+				this.intentos = -1;
 				dibujarPoste();
 				palabra.generar();
 				palabra.dibujarCampo();
