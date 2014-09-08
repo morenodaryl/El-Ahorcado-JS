@@ -60,6 +60,52 @@ p{
 	color: #7DBEFF;
 }
 
+#ganadas{
+	background-color: #0080FF;
+	border-radius: 6px 0 0 0;	
+	color: white;
+	font-size: 1.4em;
+	left: -1.5em;
+	padding-left: 0.2em;
+	padding-right: 1em;
+	position:absolute;
+	top: 2em;
+	z-index: -1;
+}
+
+#perdidas{
+	background-color: #FF0000;;
+	border-radius: 0 0 0 6px;
+	color: white;
+	font-size: 1.4em;
+	left: -1.5em;
+	padding-left: 0.2em;
+	padding-right: 1em;
+	position:absolute;
+	top: 3em;
+	z-index: -1;
+}
+
+#puestas{
+	background-color: #0080FF;
+	border-radius: 0 4px 4px 0;
+	left: 400px;
+	margin-top: 0px;
+	padding-left: 0;
+	position: absolute;
+	top: 3em;
+}
+
+#puestas li{
+	list-style: none;
+	color: #FFFFFF;
+	font-size: 1.2em;
+	text-align: center;
+	margin: 2px;
+	padding-left: 3px;
+}
+
+
 #letra{
 	width: 40px;
 	display: inline-block;
@@ -106,52 +152,7 @@ p{
 	vertical-align: middle;
 }
 
-#puestas{
-	margin-top: 0px;
-	padding-left: 0;
-	position: absolute;
-	left: 400px;
-	top: 3em;
-	background-color: #0080FF;
-	border-radius: 0 4px 4px 0;
-}
-
-#puestas li{
-	list-style: none;
-	color: #FFFFFF;
-	font-size: 1.2em;
-	text-align: center;
-	margin: 2px;
-	padding-left: 3px;
-
-}
 
 form{
 	margin-top: 6px;
-}
-
-#ganadas{
-	position:absolute;
-	left: -1.5em;
-	padding-right: 1em;
-	padding-left: 0.2em;
-	border-radius: 6px 0 0 0;	
-	font-size: 1.4em;
-	top: 2em;
-	color: white;
-	background-color: #0080FF;
-	z-index: -1;
-}
-
-#perdidas{
-	position:absolute;
-	left: -1.5em;
-	padding-right: 1em;
-	padding-left: 0.2em;
-	font-size: 1.4em;
-	border-radius: 0 0 0 6px;
-	top: 3em;
-	color: white;
-	background-color: #FF0000;;
-	z-index: -1;
 }
